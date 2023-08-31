@@ -10,7 +10,15 @@ If you've previously imported the key from Jenkins, the rpm --import will fail b
 
   yum install fontconfig java-11-openjdk
   yum install jenkins
-  
+
+Tesrt the connect
+
+Command to install java : sudo yum install java
+Command to check java version : sudo java -version
+Command to check jenkins status : sudo service jenkins status
+Command to start jenkins service : sudo service jenkins start
+
+
 The rpm packages were signed using this key:
 
 pub   rsa4096 2023-03-27 [SC] [expires: 2026-03-26]
