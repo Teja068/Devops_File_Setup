@@ -15,6 +15,17 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt-get update
+------------------------------ if get GPG Key Error ----------------
+i think you are doing mistake to add gpg key. add key using command
+
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+and add repository
+
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+update source list
+
+sudo apt-get update 
+---------------------------------------------------------------------------------
 
 sudo apt-get install jenkins
 Once that’s done, start the Jenkins service with the following command:
